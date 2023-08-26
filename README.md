@@ -55,50 +55,51 @@ Doc: <a href="https://navdoc.super.site">https://navdoc.super.site</a>
 - 🍰 Support import from Chrome bookmarks
 
 <br />
+
 ## Deploy
 Like counting numbers "3 2 1" that simple.
 <br />
 #### Method one (gh-pages free)
-1、Fork the current project.。
+1. Fork the current project.
 
-2、[https://github.com/settings/tokens](https://github.com/settings/tokens) apply for a token, check the corresponding permissions, if you don’t understand, select all, copy and save the token。
+2. [https://github.com/settings/tokens](https://github.com/settings/tokens) apply for a token, check the corresponding permissions, if you don’t understand, select all, copy and save the token。
 
-3、https://github.com/<Your User Name>/nav/settings/secrets/actions/new  Create a new application token, name fill in TOKEN (All are uppercase)。
+3. https://github.com/<Your User Name>/nav/settings/secrets/actions/new  Create a new application token, name fill in TOKEN (All are uppercase)。
 
-4、open https://github.com/<Your User Name>/nav/actions click "Green Button"
+4. Open https://github.com/<Your User Name>/nav/actions click "Green Button"
 
-5、Be sure to modify the project configuration file [nav.config.ts](nav.config.ts), change to your github repository url
+5. Be sure to modify the project configuration file [nav.config.ts](nav.config.ts), change to your github repository url
 
-6、After 5 minutes, open https://<Your User Name>.github.io/nav , you will see a very powerful navigation website.
+6. After 5 minutes, open https://<Your User Name>.github.io/nav , you will see a very powerful navigation website.
 
-7、Customize:
+7. Customize:
 
-7.1 nav.config.ts - change the settings for homeurl, title, description, keywords, default theme, and footerContent. 
-
-7.2 Remove/replace the my own ads and analytic codes in /src/index.html file
-
-```conf
-<!-- Remove/replace following codes which are for ads and statistics until before "</head>" -->  
+      1. nav.config.ts - change the settings for homeurl, title, description, keywords, default theme, and footerContent. 
+    
+      2. Remove/replace the my own ads and analytic codes in /src/index.html file
   
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6S10GPN71"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-Y6S10GPN71');
-</script>
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5660349373091698"
-     crossorigin="anonymous">
-</script>  
-
-<!-- Remove/replace above codes -->  
-```
-7.3 Tag categories (Manual Update) - /data/tag.json
-
-7.4 Replace logo from backend dashboard.
+          ```conf
+              <!-- Remove/replace following codes which are for ads and statistics until before "</head>" -->  
+                
+              <!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y6S10GPN71"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              
+                gtag('config', 'G-Y6S10GPN71');
+              </script>
+              
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5660349373091698"
+                   crossorigin="anonymous">
+              </script>  
+              
+              <!-- Remove/replace above codes -->  
+          ```
+      3. Tag categories (Manual Update) - /data/tag.json
+    
+      4. Replace logo from backend dashboard.
 
 
 ### Method 2 (Free Vercel)
