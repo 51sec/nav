@@ -2,7 +2,7 @@ import { IConfig } from './src/types'
 
 const c: IConfig = {
   // [Mondatory], Please replace following Github url with your own Github address which you forked in. 
-  gitRepoUrl: 'https://github.com/51sec/nav',
+  gitRepoUrl: 'https://github.com/gonmmarques/nav',
 
   // Deployment branch name
   branch: 'main',
